@@ -3,6 +3,14 @@ npm init -y
 ou
 expo init pdv_update
 
+# pdv_update" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/ivomarcarvalho/pdv_update.git
+git push -u origin main
+
 # empacotar o app
 npm install -g pkg
 pkg .

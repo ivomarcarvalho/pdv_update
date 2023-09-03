@@ -26,14 +26,19 @@ async function pdv() {
 }
 
 async function getFiles(dirfiles) {
-    const files = fs.readdirSync(dirfiles);
     const pdvFiles = []
-    for (const file of files) {
-        if (file.indexOf('.') !== 0 && file.slice(-4) === '.djm') {
-            pdvFiles.push(file)
+    if (!fs.existsSync(dirfiles)) {
+        console.log('**************** Diretório inexistente! ', dirfiles, '***********************************')
+    } else {
+        const files = fs.readdirSync(dirfiles);
+        for (const file of files) {
+            if (file.indexOf('.') !== 0 && file.slice(-4) === '.djm') {
+                pdvFiles.push(file)
+            }
         }
     }
     return pdvFiles
+
 
 }
 
@@ -96,7 +101,7 @@ async function moveFile(file) {
     const newFilePath = newPath + fileName
     fs.rename(oldPath, newFilePath, function (err) {
         if (err) throw err
-        console.log(oldPath +' movido para ' + newFilePath)
+        console.log(oldPath + ' movido para ' + newFilePath)
 
         //console.log('Successfully renamed - AKA moved!')
     })
