@@ -1,8 +1,6 @@
 # 
-,/README.md*
+./README.md*
 ./*.ini
-.ivm
-.ivm8
 
 # dependencies
 node_modules/
