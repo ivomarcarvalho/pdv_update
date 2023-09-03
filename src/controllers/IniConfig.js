@@ -10,7 +10,6 @@ function conf() {
     let iniPath
 
     // Verifica se a variável de ambiente NODE_ENV está definida como 'production'
-
     if (process.env.NODE_ENV === 'production') {
         // Use o caminho para produção
         execDir = path.dirname(process.execPath);
