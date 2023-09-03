@@ -11,6 +11,9 @@ git branch -M main
 git remote add origin https://github.com/ivomarcarvalho/pdv_update.git
 git push -u origin main
 
+# em caso de erro push forçado
+git push -f origin main
+
 # empacotar o app
 npm install -g pkg
 pkg .
