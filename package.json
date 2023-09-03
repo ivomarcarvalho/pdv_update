@@ -1,21 +1,35 @@
 {
   "name": "pdv_update",
   "version": "1.0.0",
-  "main": "node_modules/expo/AppEntry.js",
+  "main": "server.js",
+  "bin": {
+    "pdv_update": "server.js"
+  },
+  "pkg": {
+    "assets": [
+      "pdv_update.ini"
+    ],
+    "targets": [
+      "node14-win-x64"
+    ]
+  },
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
+    "dev": "nodemon /src/server.js",
+    "start": "node server.js"
   },
   "dependencies": {
-    "expo": "~49.0.8",
-    "expo-status-bar": "~1.6.0",
-    "react": "18.2.0",
-    "react-native": "0.72.4"
+    "express": "^4.18.2",
+    "ini": "^4.1.1",
+    "moment": "^2.29.4",
+    "node-firebird": "^1.1.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.20.0",
+    "nodemon": "^3.0.1"
   },
-  "private": true
+  "private": true,
+  "description": "expo init pdv_update",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
