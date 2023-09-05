@@ -20,8 +20,7 @@ const importarPdvPeriodicamente = () => {
       .catch(error => {
         console.log('Erro na importação dos arquivos djsystem', error)
       })
-
-  }, 30000)
+  }, 300000)
 }
 
 app.listen(3333, () => {
