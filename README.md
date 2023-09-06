@@ -2,6 +2,8 @@
 npm init -y
 ou
 expo init pdv_update
+# log
+npm i winston
 
 # pdv_update" >> README.md
 git init

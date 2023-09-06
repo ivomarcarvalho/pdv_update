@@ -1,6 +1,7 @@
 # 
 ./README.md*
 ./*.ini
+*.log
 
 # dependencies
 node_modules/
